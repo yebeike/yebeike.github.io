@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2020/06/22/my-first-post/</url>
+    <content><![CDATA[<p>这里是试验内容，看下能不能显示</p>
+<a id="more"></a>
+<p>这里是更多内容，仅供测试，看下能否查看</p>
+]]></content>
+      <categories>
+        <category>others</category>
+      </categories>
+      <tags>
+        <tag>杂</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>01分数规划-小咪买东西</title>
+    <url>/2020/06/28/01-programming/</url>
+    <content><![CDATA[<p>真正意义上的第一篇文章，顺便测试下博客语法高亮的效果，以下是文章的正文</p>
+<a id="more"></a>
+<p>题目来源：<a href="https://ac.nowcoder.com/acm/problem/14662" target="_blank" rel="noopener">https://ac.nowcoder.com/acm/problem/14662</a></p>
+<p>题目描述<br>小咪是一个土豪手办狂魔，这次他去了一家店，发现了n个手办，但他是一个很怪的人，每次只想买k个手办，而且他要让他花的每一分钱都物超所值，即：买下来的东西的总价值/总花费=max。请你来看看，他会买哪些东西吧。</p>
+<p>输入描述:<br>多组数据。<br>第一行一个整数T，为数据组数。<br>接下来有T组数据。<br>对于每组数据，第一行两个正整数n，k，如题。<br>接下来n行，每行有两个正整数ci，vi。分别为手办的花费和它对于小咪的价值。</p>
+<p>输出描述:<br>对于每组数据，输出一个数，即能得到的总价值/总花费的最大值。精确至整数。</p>
+<p>示例1：<br>输入<br>1<br>5 1<br>1 2<br>2 3<br>3 4<br>4 5<br>5 6</p>
+<p>输出<br>2</p>
+<p>备注:<br>1≤T≤10; 1≤n≤104; 1≤k≤n; 1≤ci,vi≤104</p>
+<p>题意题目说得很清楚了，这是01分数规划的模板题，主要是来熟悉01分数规划的操作。</p>
+<p>若x=∑a/∑b，所以有∑a[i]-x∑b[i]=0即∑(a[i]-xb[i])=0</p>
+<p>以下是题解代码：</p>
+<figure class="highlight c"><figcaption><span>[小咪买东西]</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> eps 1e-6 <span class="comment">//精度为1e-6</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1e4</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> n,k,an[N],bn[N];</span><br><span class="line"><span class="keyword">double</span> cn[N];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">check</span><span class="params">(<span class="keyword">double</span> x)</span></span>&#123;<span class="comment">//check函数</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        cn[i]=bn[i]-an[i]*x;</span><br><span class="line">    sort(cn+<span class="number">1</span>,cn+<span class="number">1</span>+n,greater&lt;<span class="keyword">double</span>&gt;());<span class="comment">//顺序从大到小</span></span><br><span class="line">    <span class="keyword">double</span> sum=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=k;i++)<span class="comment">//累加和最大</span></span><br><span class="line">        sum+=cn[i];</span><br><span class="line">    <span class="keyword">if</span>(sum&gt;=<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">    <span class="keyword">while</span>(t--)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;k;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;an[i]&gt;&gt;bn[i];</span><br><span class="line">        <span class="keyword">double</span> l=<span class="number">0</span>,r=<span class="number">1e4</span>,mid,ans,cnt=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(r-l&gt;=eps)&#123; <span class="comment">//当l，r精度相差小于eps时视作相等</span></span><br><span class="line">            mid=(l+r)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(check(mid))&#123;<span class="comment">//算出每个物品的比值，如果小于0，则比值小于mid，大于等于0，则比值大于等于mid</span></span><br><span class="line">                ans=l;</span><br><span class="line">                l=mid;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                r=mid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="keyword">int</span>(ans)&lt;&lt;<span class="built_in">endl</span>;<span class="comment">//输出ans整形数据，话说回来样例牛客和本机测试不一样却是对的，太怪了</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>01分数规划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记录博客时遇到的问题及相关操作(持续更新)</title>
+    <url>/2020/06/28/hexo-notes/</url>
+    <content><![CDATA[<p>本文目的是记录下我遇到的有关写hexo-github博客时遇到的问题以及相关操作，省得我每次都要上网查，以下是正文</p>
+<a id="more"></a>
+<p>1，首先是语法高亮问题<br>博客代码若没有语法高亮,则需要在编写输入代码前输入以下几行东西<br><img src="/images/2.png" alt="alt"><br>这里只能用图片显示，因为每次输入这个就会自动显现出效果而无法正常显示代码文本，而且图片还自动居中这让我更加不爽了！</p>
+<p>这串代码中[lang:c]我理解的意思是语法高亮的效果为c语言(输入c++会多显示++这两个字符)，要注意的地方一个是如果只输入“lang:c”后显示的代码左上角处会显示空方框，因此为了美观可以在“lang:c”后添加一些自己的内容比如标题什么的。</p>
+<p>结果如下：</p>
+<figure class="highlight c"><figcaption><span>[示例]</span></figcaption><table><tr><td class="code"><pre><span class="line">这里是你的代码</span><br></pre></td></tr></table></figure>
+
+<p>代码高亮示例如下：</p>
+<figure class="highlight c"><figcaption><span>[示例]</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello World!"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2，在cmd中有关hexo的操作</p>
+<figure class="highlight c"><figcaption><span>[ hexo操作 ]</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="number">1</span> 新建文章: hexo <span class="keyword">new</span> <span class="string">"你的文章名称"</span> (名称好像不能带特殊符号，我之前试了出错了也不知道是不是这个原因)   </span><br><span class="line"><span class="number">2</span> 新建页面: hexo <span class="keyword">new</span> page <span class="string">"你的页面名称"</span> </span><br><span class="line"><span class="number">3</span> 部署文件到github(三步):</span><br><span class="line">    hexo c</span><br><span class="line">    hexo g</span><br><span class="line">    hexo d</span><br></pre></td></tr></table></figure>
+
+<p>3，编辑博客的其他操作<br>插入图片:<br>1(绝对路径)：将图片统一放在source/images文件夹中，然后编辑博客时输入这行代码：<br><img src="/images/3.png" alt="alt"><br>就可以显示出图片了！</p>
+<p>至于插入图片其他的方法我还没有试过，这里就先不写了</p>
+]]></content>
+      <categories>
+        <category>others</category>
+      </categories>
+      <tags>
+        <tag>杂</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>绘画-蕾塞</title>
+    <url>/2020/06/28/leisai/</url>
+    <content><![CDATA[<p>内容顾名思义，画的蕾塞，我对她也算是真爱了</p>
+<a id="more"></a>
+<p><img src="/images/4.jpg" alt="alt"><br>水平不堪入目<br>但把名字写在胸上是真的好涩</p>
+]]></content>
+      <categories>
+        <category>painting</category>
+      </categories>
+      <tags>
+        <tag>绘画</tag>
+      </tags>
+  </entry>
+</search>
