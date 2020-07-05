@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>概率论结论+套题 | Yeshell的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="还是写写吧，主要是给自己看">
+<meta property="og:type" content="article">
+<meta property="og:title" content="概率论结论+套题">
+<meta property="og:url" content="http://yoursite.com/2020/07/05/probability%20theory/index.html">
+<meta property="og:site_name" content="Yeshell的个人博客">
+<meta property="og:description" content="还是写写吧，主要是给自己看">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-05T08:34:10.000Z">
+<meta property="article:modified_time" content="2020-07-05T12:37:54.722Z">
+<meta property="article:author" content="Yeshell">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="概率论">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Yeshell的个人博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">好好学习，天天向上</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-probability theory" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/07/05/probability%20theory/" class="article-date">
+  <time class="dt-published" datetime="2020-07-05T08:34:10.000Z" itemprop="datePublished">2020-07-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/algorithm/">algorithm</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      概率论结论+套题
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>还是写写吧，主要是给自己看</p>
+<a id="more"></a>
+<p><font size=5>概率论结论</font><br>Bash:<br>   总数n个，两人轮流取1~m个，先取完者胜<br>   结论: n%(m+1)==0时，先手必胜，反之必败</p>
+<p>Wythoft:<br>   两堆总数分别为a，b，取法有两种：一是在任一堆取至少1无上限的数目；二是两堆中去相同至少一无上限的数目<br>   两人轮流取，先取完者胜出<br>   结论: abs(a-b)乘R==min(a,b)时，先手必败，反之必胜<br>   R为黄金分割比:(根号5+1)/2</p>
+<p>Nim:<br>   n堆数量分别为an[i],轮流取n堆中某堆不少于1个的数目，先取完者胜<br>   结论:每堆的数目异或(^)结果为0时，先手必败，反之必胜</p>
+<p>Fibonacci:<br>   总数n个，一开始先手至少1个不可取完，然后后手可拿数是: 1~先手拿的数量乘2，以此类推<br>   结论: n为斐波那契数时先手必败，反之必胜。另外第47个斐波那契数破int范围</p>
+<p>sg函数: 我还不会( ´_ゝ`)</p>
+<p><font size=5>套题</font><br>题目来源：<a href="https://vjudge.net/contest/380862" target="_blank" rel="noopener">https://vjudge.net/contest/380862</a></p>
+<p><font size=5>A - bash1</font></p>
+<p>题目描述<br>    十年前读大学的时候，中国每年都要从国外引进一些电影大片，其中有一部电影就叫《勇敢者的游戏》（英文名称：Zathura），一直到现在，我依然对于电影中的部分电脑特技印象深刻。<br>    今天，大家选择上机考试，就是一种勇敢（brave）的选择；这个短学期，我们讲的是博弈（game）专题；所以，大家现在玩的也是“勇敢者的游戏”，这也是我命名这个题目的原因。<br>    当然，除了“勇敢”，我还希望看到“诚信”，无论考试成绩如何，希望看到的都是一个真实的结果，我也相信大家一定能做到的~<br>    各位勇敢者要玩的第一个游戏是什么呢？很简单，它是这样定义的：<br>    1、  本游戏是一个二人游戏;<br>    2、  有一堆石子一共有n个；<br>    3、  两人轮流进行;<br>    4、  每走一步可以取走1…m个石子；<br>    5、  最先取光石子的一方为胜；<br>    如果游戏的双方使用的都是最优策略，请输出哪个人能赢。<br>Input</p>
+<pre><code>输入数据首先包含一个正整数C(C&lt;=100)，表示有C组测试数据。
+每组测试数据占一行，包含两个整数n和m（1&lt;=n,m&lt;=1000），n和m的含义见题目描述。</code></pre><p>Output</p>
+<pre><code>如果先走的人能赢，请输出“first”，否则请输出“second”，每个实例的输出占一行。</code></pre><p>Sample Input</p>
+<pre><code>2
+23 2
+4 3</code></pre><p>Sample Output</p>
+<pre><code>first
+second</code></pre><p>题意</p>
+<pre><code>没什么好说的
+bash博弈模板题</code></pre><p>题解代码：</p>
+<figure class="highlight c"><figcaption><span>[ bash1 ]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;c;</span><br><span class="line">    <span class="keyword">while</span>(c--)&#123;</span><br><span class="line">        <span class="keyword">int</span> n,m;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">        <span class="keyword">if</span>(n%(m+<span class="number">1</span>)==<span class="number">0</span>)</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"second"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"first"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p><font size=5>B - bash2</font></p>
+<p>题目描述<br>    大学英语四级考试就要来临了，你是不是在紧张的复习？也许紧张得连短学期的ACM都没工夫练习了，反正我知道的Kiki和Cici都是如此。当然，作为在考场浸润了十几载的当代大学生，Kiki和Cici更懂得考前的放松，所谓“张弛有道”就是这个意思。这不，Kiki和Cici在每天晚上休息之前都要玩一会儿扑克牌以放松神经。<br>    “升级”？“双扣”？“红五”？还是“斗地主”？当然都不是！那多俗啊~<br>    作为计算机学院的学生，Kiki和Cici打牌的时候可没忘记专业，她们打牌的规则是这样的：<br>    1、  总共n张牌;<br>    2、  双方轮流抓牌；<br>    3、  每人每次抓牌的个数只能是2的幂次（即：1，2，4，8，16…）<br>    4、  抓完牌，胜负结果也出来了：最后抓完牌的人为胜者；<br>    假设Kiki和Cici都是足够聪明（其实不用假设，哪有不聪明的学生~），并且每次都是Kiki先抓牌，请问谁能赢呢？<br>    当然，打牌无论谁赢都问题不大，重要的是马上到来的CET-4能有好的状态。<br>    Good luck in CET-4 everybody!<br>Input</p>
+<pre><code>输入数据包含多个测试用例，每个测试用例占一行，包含一个整数n（1&lt;=n&lt;=1000）。</code></pre><p>Output</p>
+<pre><code>如果Kiki能赢的话，请输出“Kiki”，否则请输出“Cici”，每个实例的输出占一行。</code></pre><p>Sample Input</p>
+<pre><code>1
+3</code></pre><p>Sample Output</p>
+<pre><code>Kiki
+Cici</code></pre><p>题意</p>
+<pre><code>K和C每次抓的牌数都是2的次幂，极端情况考虑如果手牌总数是3，那先手只能抓1或2，先手必输。
+同理牌总数如果是3的倍数，先手抓牌后剩余数量必满足3*k+1或3*k+2的形式,符合bash博弈的形式
+(即后手先抓1或2张牌，之后先手无论取多少，后手只要抓与先手抓牌和是3的倍数的牌数即可)
+因此先手必输
+因此当总手牌数为3的倍数时先手必输</code></pre><p>题解代码：</p>
+<figure class="highlight c"><figcaption><span>[ bash2 ]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n%<span class="number">3</span>==<span class="number">0</span>)</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"Cici"</span>&lt;&lt;<span class="built_in">endl</span>;<span class="comment">//注意到</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"Kiki"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><font size=5>C - 经典nim </font><br><font size=3>这题我还不太会( ´_ゝ`) </font></p>
+<p><font size=5>D - 经典nim(杭电校赛题) </font></p>
+<p>题目描述<br>      Tom和Jerry正在玩一种Northcott游戏，可是Tom老是输，因此他怀疑这个游戏是不是有某种必胜策略，郁闷的Tom现在向你求救了，你能帮帮他么？<br>    游戏规则是这样的：<br>      游戏在一个n行m列（1 ≤ n ≤ 1000且2 ≤ m ≤ 100）的棋盘上进行，每行有一个黑子（黑方）和一个白子（白方）。<br>      执黑的一方先行，每次玩家可以移动己方的任何一枚棋子到同一行的任何一个空格上，当然这过程中不许越过该行的敌方棋子。双方轮流移动，直到某一方无法行动为止，移动最后一步的玩家获胜。<br>      Tom总是先下（黑方）。</p>
+<p>Input<br>    　　<br>    输入数据有多组。每组数据第一行为两个整数n和m，由空格分开。<br>    接下来有n行，每行两个数Ti，Ji (1 ≤ Ti, Ji ≤ m)分别表示Tom和Jerry在该行棋子所处的列数。<br>    注意：各组测试数据之间有不定数量的空行。你必须处理到文件末。<br>Output</p>
+<pre><code>对于每组测试数据输出一行你的结果。如果当前局面下Tom有必胜策略则输出“I WIN!”，否则输出“BAD LUCK!”。</code></pre><p>Sample Input</p>
+<pre><code>3 6
+4 5
+1 2
+1 2
+
+3 6
+4 5
+1 3
+1 2</code></pre><p>Sample Output</p>
+<pre><code>BAD LUCK!
+I WIN!</code></pre><p>题意</p>
+<pre><code>可以看出是nim博弈的题目，且看的是每行黑白棋间的空格数，且空格数只会减少
+(一方棋子向两侧，把同行棋子同向移相同距离即可视作没有变化)
+因此异或每一行黑白棋间空格数看结果为零先手输，反之先手赢</code></pre><p>题解代码：</p>
+<figure class="highlight c"><figcaption><span>[ nim(杭电校题) ]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m)&#123;</span><br><span class="line">        <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(n--)&#123;</span><br><span class="line">           <span class="keyword">int</span> a,b;</span><br><span class="line">           <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">           <span class="keyword">int</span> d=<span class="built_in">abs</span>(a-b)<span class="number">-1</span>;<span class="comment">//黑白棋间的空格数</span></span><br><span class="line">           sum^=d;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(sum!=<span class="number">0</span>)</span><br><span class="line">           <span class="built_in">cout</span>&lt;&lt;<span class="string">"I WIN!"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">           <span class="built_in">cout</span>&lt;&lt;<span class="string">"BAD LUCK!"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><font size=5>E - 阶梯nim</font><br><font size=3>这题还没写( `_っ´)</font></p>
+<p><font size=5>阶梯nim（较难）  </font><br><font size=3>这题还没写( `_っ´)</font></p>
+<p><font size=5>G - Wythoff’s game1 </font></p>
+<p>题目描述<br>     有两堆石子，数量任意，可以不同。游戏开始由两个人轮流取石子。<br>     游戏规定，每次有两种不同的取法，一是可以在任意的一堆中取走任意多的石子；二是可以在两堆中同时取走相同数量的石子。<br>     最后把石子全部取完者为胜者。现在给出初始的两堆石子的数目，如果轮到你先取，假设双方都采取最好的策略，问最后你是胜者还是败者。<br>Input</p>
+<pre><code>输入包含若干行，表示若干种石子的初始情况，其中每一行包含两个非负整数a和b，表示两堆石子的数目，a和b都不大于1,000,000,000。</code></pre><p>Output</p>
+<pre><code>输出对应也有若干行，每行包含一个数字1或0，如果最后你是胜者，则为1，反之，则为0。</code></pre><p>Sample Input</p>
+<pre><code>2 1
+8 4
+4 7</code></pre><p>Sample Output</p>
+<pre><code>0
+1
+0</code></pre><p>题意</p>
+<pre><code>没什么好说的，威佐夫博弈模板题，不过倒是记住了max和min的头文件是&lt;algorithm&gt;
+满足abs(a-b)*r==min(a,b)先手必败，反之必胜</code></pre><p>题解代码：</p>
+<figure class="highlight c"><figcaption><span>[ Wythoff's game1 ]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;//max,min的头文件</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ll a,b;</span><br><span class="line">    <span class="keyword">double</span> r=(<span class="built_in">sqrt</span>(<span class="number">5.0</span>)+<span class="number">1</span>)/<span class="number">2</span>;<span class="comment">//黄金分割比：根号5加1除2</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b)&#123;</span><br><span class="line">        <span class="keyword">int</span> d=<span class="built_in">abs</span>(a-b)*r;</span><br><span class="line">        <span class="keyword">if</span>(d==<span class="built_in">min</span>(a,b))</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="number">1</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><font size=5>H - Wythoff’s game2 </font><br><font size=3>这题还不会( ´_ゝ`)</font></p>
+<p><font size=5>I - 斐波那契博弈  </font></p>
+<p>题目描述<br>    1堆石子有n个,两人轮流取.先取者第1次可以取任意多个，但不能全部取完.以后每次取的石子数不能超过上次取子数的2倍。取完者胜.先取者负输出”Second win”.先取者胜输出”First win”.<br>Input</p>
+<pre><code>输入有多组.每组第1行是2&lt;=n&lt;2^31. n=0退出.</code></pre><p>Output</p>
+<pre><code>先取者负输出&quot;Second win&quot;. 先取者胜输出&quot;First win&quot;.
+参看Sample Output.</code></pre><p>Sample Input</p>
+<pre><code>2
+13
+10000
+0</code></pre><p>Sample Output</p>
+<pre><code>Second win
+Second win
+First win</code></pre><p>题意</p>
+<pre><code>经典的斐波那契博弈，结论是当n为斐波那契数时先手必败
+因为n的数字在int范围内，通过输出斐波那契数观察可得第47个斐波那契数就已经破了int的范围
+因此存储斐波那契数组长度在50以内已经足够</code></pre><p>题解代码：</p>
+<figure class="highlight c"><figcaption><span>[ 斐波那契博弈 ]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll a[<span class="number">50</span>],len;</span><br><span class="line"><span class="keyword">const</span> ll maxn = <span class="number">2147483648</span>+<span class="number">100</span>;<span class="comment">//破int的数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j;</span><br><span class="line">    ll n;</span><br><span class="line">    a[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    a[<span class="number">2</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">3</span>;i&lt;=<span class="number">50</span>;i++)&#123;<span class="comment">//预先存储好int范围内的所有的斐波那契数</span></span><br><span class="line">        a[i]=a[i<span class="number">-1</span>]+a[i<span class="number">-2</span>];</span><br><span class="line">        <span class="keyword">if</span>(a[i]&gt;=maxn)<span class="comment">//破int</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    len=i;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">bool</span> flag=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;len;i++)&#123;<span class="comment">//看是不是斐波那契数</span></span><br><span class="line">            <span class="keyword">if</span>(a[i]==n)&#123;<span class="comment">//是</span></span><br><span class="line">                flag=<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(a[i]&gt;n)</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(flag==<span class="number">1</span>)<span class="comment">//先手必败</span></span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"Second win"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"First win"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><font size=5>J - sg函数1</font><br><font size=3>这题还没写( `_っ´)</font></p>
+<p><font size=5>K - sg函数2 </font><br><font size=3>这题还没写( `_っ´)</font></p>
+<p><font size=5>L - 区域赛金牌题(HDU5973) </font><br><font size=3>这题还没写( `_っ´)</font></p>
+<p><font size=5>M - SOS</font><br><font size=3>这题还没写( `_っ´)</font></p>
+<p><font size=5>N - Number Game</font><br><font size=3>这题还没写( `_っ´)</font></p>
+<p><font size=5>O - 01 Game</font></p>
+<p>题目描述<br>    Alica and Bob are playing a game.<br>    Initially they have a binary string s consisting of only characters 0 and 1.<br>    Alice and Bob make alternating moves: Alice makes the first move, Bob makes the second move, Alice makes the third one, and so on.<br>    During each move, the current player must choose two different adjacent characters of string s and delete them. For example, if s=1011001，then the following moves are possible:<br>       delete s1 and s2: 1011001→11001;<br>       delete s2 and s3: 1011001→11001;<br>       delete s4 and s5: 1011001→10101;<br>       delete s6 and s7: 1011001→10110.<br>    If a player can’t make any move, they lose. Both players play optimally.<br>    You have to determine if Alice can win.<br>Input</p>
+<pre><code>First line contains one integer t(1≤t≤1000) — the number of test cases.
+Only line of each test case contains one string s(1≤|s|≤100), consisting of only characters 0 and 1.</code></pre><p>Output</p>
+<pre><code>For each test case print answer in the single line.
+If Alice can win print DA (YES in Russian) in any register. 
+Otherwise print NET (NO in Russian) in any register.</code></pre><p>Sample Input</p>
+<pre><code>3
+01
+1111
+0011</code></pre><p>Sample Output</p>
+<pre><code>DA
+NET
+NET</code></pre><p>Note</p>
+<pre><code>In the first test case after Alice&apos;s move string s become empty and Bob can not make any move.
+In the second test case Alice can not make any move initially.
+In the third test case after Alice&apos;s move string s turn into 01. 
+Then, after Bob&apos;s move string s become empty and Alice can not make any move.</code></pre><p>题意</p>
+<pre><code>给定一个只含0和1的字符串
+Alica(先手)和Bob先后删去字符串中的“01”或“10”到无法删除为止，谁最后无法删除谁输
+思维题，01肯定会相遇，所以只需判断01对数再判胜负即可
+找规律可得01对数为奇数时Bob必败，反之Alica必败
+还有我才搞清c++用&lt;string&gt;!!</code></pre><p>题解代码：</p>
+<figure class="highlight c"><figcaption><span>[ 01 Game ]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;//c++用&lt;string&gt;!!!!!!!!!</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">    <span class="keyword">while</span>(t--)&#123;</span><br><span class="line">        <span class="built_in">string</span> s;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;s;</span><br><span class="line">        <span class="keyword">int</span> len=s.length();</span><br><span class="line">        <span class="keyword">int</span> s0=<span class="number">0</span>,s1=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i]==<span class="string">'0'</span>)</span><br><span class="line">                s0++;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                s1++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> d=<span class="built_in">min</span>(s0,s1);<span class="comment">//01对数</span></span><br><span class="line">        <span class="keyword">if</span>(d%<span class="number">2</span>==<span class="number">0</span>)<span class="comment">//偶数必败</span></span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"NET"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"DA"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><font size=5>P - Game On Leaves</font></p>
+<p>题目描述<br>    Ayush and Ashish play a game on an unrooted tree consisting of n nodes numbered 1 to n.<br>    Players make the following move in turns:<br>       Select any leaf node in the tree and remove it together with any edge which has this node as one of its endpoints.<br>    A leaf node is a node with degree less than or equal to 1.<br>    A tree is a connected undirected graph without cycles.<br>    There is a special node numbered x.<br>    The player who removes this node wins the game. Ayush moves first.<br>    Determine the winner of the game if each player plays optimally.<br>Input</p>
+<pre><code>The first line of the input contains a single integer t
+(1≤t≤10) the number of testcases. 
+The description of the test cases follows.
+The first line of each testcase contains two integers n and x 
+(1≤n≤1000,1≤x≤n) the number of nodes in the tree and the special node respectively.
+Each of the next n−1 lines contain two integers u, v 
+(1≤u,v≤n, u≠v), meaning that there is an edge between nodes u and v in the tree.</code></pre><p>Output</p>
+<pre><code>For every test case, if Ayush wins the game, print &quot;Ayush&quot;, otherwise print &quot;Ashish&quot; (without quotes).</code></pre><p>Sample Input</p>
+<pre><code>1
+3 1
+2 1
+3 1</code></pre><p>Sample Output</p>
+<pre><code>Ashish</code></pre><p>Sample Input</p>
+<pre><code>1
+3 2
+1 2
+1 3</code></pre><p>Sample Output</p>
+<pre><code>Ayush</code></pre><p>Note</p>
+<pre><code>For the 1st test case
+Ayush can only remove node 2 or 3 after which node 1 becomes a leaf node 
+And Ashish can remove it in his turn.
+For the 2nd test case, Ayush can remove node 2 in the first move itself.</code></pre><p>题意</p>
+<pre><code>给定多个只无根树(其实就是无向图吧)
+Ayush(先手)和Ashish先后删去树中的叶子结点，谁先删去特殊点X谁赢
+思维题
+当X为叶子结点或图只有1个结点时Ayush必胜，当不是叶子结点时,看结点数量
+摘点时该点度数要为1或0，也就是说要摘得X必须至少要将所有点删至只剩两个点(其中一个是X)
+在结点数大于1情况下
+找规律可得当n为奇数，后手必胜，反之先手必胜
+感觉这都不算什么博弈了(　ﾟ 3ﾟ)</code></pre><p>题解代码：</p>
+<figure class="highlight c"><figcaption><span>[ Game On Leaves ]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t,edg[<span class="number">1001</span>];;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">    <span class="keyword">while</span>(t--)&#123;</span><br><span class="line">        <span class="built_in">memset</span>(edg,<span class="number">0</span>,<span class="keyword">sizeof</span>(edg));</span><br><span class="line">        <span class="keyword">int</span> n,x,a,b;;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;x;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n<span class="number">-1</span>;i++)&#123;<span class="comment">//算a,b点的度</span></span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">            edg[a]++;<span class="comment">//度数加一</span></span><br><span class="line">            edg[b]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(edg[x]&lt;=<span class="number">1</span>)<span class="comment">//x为叶子结点</span></span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"Ayush"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">1</span>)</span><br><span class="line">               <span class="built_in">cout</span>&lt;&lt;<span class="string">"Ashish"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">               <span class="built_in">cout</span>&lt;&lt;<span class="string">"Ayush"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><font size=5>Q - Card Game</font><br><font size=3>这题还没写( `_っ´)</font></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/05/probability%20theory/" data-id="ckc8trkpj0000a0u4eu2ka8nf" data-title="概率论结论+套题" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" rel="tag">概率论</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/28/leisai/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">绘画-蕾塞</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/others/">others</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/painting/">painting</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/01%E5%88%86%E6%95%B0%E8%A7%84%E5%88%92/" rel="tag">01分数规划</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82/" rel="tag">杂</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" rel="tag">概率论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%98%E7%94%BB/" rel="tag">绘画</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/01%E5%88%86%E6%95%B0%E8%A7%84%E5%88%92/" style="font-size: 10px;">01分数规划</a> <a href="/tags/%E6%9D%82/" style="font-size: 20px;">杂</a> <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" style="font-size: 10px;">概率论</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 20px;">算法</a> <a href="/tags/%E7%BB%98%E7%94%BB/" style="font-size: 10px;">绘画</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/05/probability%20theory/">概率论结论+套题</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/28/leisai/">绘画-蕾塞</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/28/hexo-notes/">记录博客时遇到的问题及相关操作(持续更新)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/28/01-programming/">01分数规划-小咪买东西</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/22/my-first-post/">我的第一篇博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Yeshell<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
