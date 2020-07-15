@@ -94,7 +94,8 @@
 <p>sg函数: 我还不会( ´_ゝ`)</p>
 <p><font size=5>套题</font><br>题目来源：<a href="https://vjudge.net/contest/380862" target="_blank" rel="noopener">https://vjudge.net/contest/380862</a></p>
 <p><font size=5>A - bash1</font></p>
-<p>题目描述<br>    十年前读大学的时候，中国每年都要从国外引进一些电影大片，其中有一部电影就叫《勇敢者的游戏》（英文名称：Zathura），一直到现在，我依然对于电影中的部分电脑特技印象深刻。<br>    今天，大家选择上机考试，就是一种勇敢（brave）的选择；这个短学期，我们讲的是博弈（game）专题；所以，大家现在玩的也是“勇敢者的游戏”，这也是我命名这个题目的原因。<br>    当然，除了“勇敢”，我还希望看到“诚信”，无论考试成绩如何，希望看到的都是一个真实的结果，我也相信大家一定能做到的~<br>    各位勇敢者要玩的第一个游戏是什么呢？很简单，它是这样定义的：<br>    1、  本游戏是一个二人游戏;<br>    2、  有一堆石子一共有n个；<br>    3、  两人轮流进行;<br>    4、  每走一步可以取走1…m个石子；<br>    5、  最先取光石子的一方为胜；<br>    如果游戏的双方使用的都是最优策略，请输出哪个人能赢。<br>Input</p>
+<p>题目描述<br>    十年前读大学的时候，中国每年都要从国外引进一些电影大片，其中有一部电影就叫《勇敢者的游戏》（英文名称：Zathura），一直到现在，我依然对于电影中的部分电脑特技印象深刻。<br>    今天，大家选择上机考试，就是一种勇敢（brave）的选择；这个短学期，我们讲的是博弈（game）专题；所以，大家现在玩的也是“勇敢者的游戏”，这也是我命名这个题目的原因。<br>    当然，除了“勇敢”，我还希望看到“诚信”，无论考试成绩如何，希望看到的都是一个真实的结果，我也相信大家一定能做到的~<br>    各位勇敢者要玩的第一个游戏是什么呢？很简单，它是这样定义的：<br>    1、  本游戏是一个二人游戏;<br>    2、  有一堆石子一共有n个；<br>    3、  两人轮流进行;<br>    4、  每走一步可以取走1…m个石子；<br>    5、  最先取光石子的一方为胜；<br>    如果游戏的双方使用的都是最优策略，请输出哪个人能赢。</p>
+<p>Input</p>
 <pre><code>输入数据首先包含一个正整数C(C&lt;=100)，表示有C组测试数据。
 每组测试数据占一行，包含两个整数n和m（1&lt;=n,m&lt;=1000），n和m的含义见题目描述。</code></pre><p>Output</p>
 <pre><code>如果先走的人能赢，请输出“first”，否则请输出“second”，每个实例的输出占一行。</code></pre><p>Sample Input</p>
@@ -109,7 +110,8 @@ bash博弈模板题</code></pre><p>题解代码：</p>
 
 
 <p><font size=5>B - bash2</font></p>
-<p>题目描述<br>    大学英语四级考试就要来临了，你是不是在紧张的复习？也许紧张得连短学期的ACM都没工夫练习了，反正我知道的Kiki和Cici都是如此。当然，作为在考场浸润了十几载的当代大学生，Kiki和Cici更懂得考前的放松，所谓“张弛有道”就是这个意思。这不，Kiki和Cici在每天晚上休息之前都要玩一会儿扑克牌以放松神经。<br>    “升级”？“双扣”？“红五”？还是“斗地主”？当然都不是！那多俗啊~<br>    作为计算机学院的学生，Kiki和Cici打牌的时候可没忘记专业，她们打牌的规则是这样的：<br>    1、  总共n张牌;<br>    2、  双方轮流抓牌；<br>    3、  每人每次抓牌的个数只能是2的幂次（即：1，2，4，8，16…）<br>    4、  抓完牌，胜负结果也出来了：最后抓完牌的人为胜者；<br>    假设Kiki和Cici都是足够聪明（其实不用假设，哪有不聪明的学生~），并且每次都是Kiki先抓牌，请问谁能赢呢？<br>    当然，打牌无论谁赢都问题不大，重要的是马上到来的CET-4能有好的状态。<br>    Good luck in CET-4 everybody!<br>Input</p>
+<p>题目描述<br>    大学英语四级考试就要来临了，你是不是在紧张的复习？也许紧张得连短学期的ACM都没工夫练习了，反正我知道的Kiki和Cici都是如此。当然，作为在考场浸润了十几载的当代大学生，Kiki和Cici更懂得考前的放松，所谓“张弛有道”就是这个意思。这不，Kiki和Cici在每天晚上休息之前都要玩一会儿扑克牌以放松神经。<br>    “升级”？“双扣”？“红五”？还是“斗地主”？当然都不是！那多俗啊~<br>    作为计算机学院的学生，Kiki和Cici打牌的时候可没忘记专业，她们打牌的规则是这样的：<br>    1、  总共n张牌;<br>    2、  双方轮流抓牌；<br>    3、  每人每次抓牌的个数只能是2的幂次（即：1，2，4，8，16…）<br>    4、  抓完牌，胜负结果也出来了：最后抓完牌的人为胜者；<br>    假设Kiki和Cici都是足够聪明（其实不用假设，哪有不聪明的学生~），并且每次都是Kiki先抓牌，请问谁能赢呢？<br>    当然，打牌无论谁赢都问题不大，重要的是马上到来的CET-4能有好的状态。<br>    Good luck in CET-4 everybody!</p>
+<p>Input</p>
 <pre><code>输入数据包含多个测试用例，每个测试用例占一行，包含一个整数n（1&lt;=n&lt;=1000）。</code></pre><p>Output</p>
 <pre><code>如果Kiki能赢的话，请输出“Kiki”，否则请输出“Cici”，每个实例的输出占一行。</code></pre><p>Sample Input</p>
 <pre><code>1
@@ -147,7 +149,8 @@ I WIN!</code></pre><p>题意</p>
 <p><font size=5>E - 阶梯nim</font><br><font size=3>这题还没写( `_っ´)</font></p>
 <p><font size=5>阶梯nim（较难）  </font><br><font size=3>这题还没写( `_っ´)</font></p>
 <p><font size=5>G - Wythoff’s game1 </font></p>
-<p>题目描述<br>     有两堆石子，数量任意，可以不同。游戏开始由两个人轮流取石子。<br>     游戏规定，每次有两种不同的取法，一是可以在任意的一堆中取走任意多的石子；二是可以在两堆中同时取走相同数量的石子。<br>     最后把石子全部取完者为胜者。现在给出初始的两堆石子的数目，如果轮到你先取，假设双方都采取最好的策略，问最后你是胜者还是败者。<br>Input</p>
+<p>题目描述<br>     有两堆石子，数量任意，可以不同。游戏开始由两个人轮流取石子。<br>     游戏规定，每次有两种不同的取法，一是可以在任意的一堆中取走任意多的石子；二是可以在两堆中同时取走相同数量的石子。<br>     最后把石子全部取完者为胜者。现在给出初始的两堆石子的数目，如果轮到你先取，假设双方都采取最好的策略，问最后你是胜者还是败者。 </p>
+<p>Input</p>
 <pre><code>输入包含若干行，表示若干种石子的初始情况，其中每一行包含两个非负整数a和b，表示两堆石子的数目，a和b都不大于1,000,000,000。</code></pre><p>Output</p>
 <pre><code>输出对应也有若干行，每行包含一个数字1或0，如果最后你是胜者，则为1，反之，则为0。</code></pre><p>Sample Input</p>
 <pre><code>2 1
@@ -162,7 +165,8 @@ I WIN!</code></pre><p>题意</p>
 
 <p><font size=5>H - Wythoff’s game2 </font><br><font size=3>这题还不会( ´_ゝ`)</font></p>
 <p><font size=5>I - 斐波那契博弈  </font></p>
-<p>题目描述<br>    1堆石子有n个,两人轮流取.先取者第1次可以取任意多个，但不能全部取完.以后每次取的石子数不能超过上次取子数的2倍。取完者胜.先取者负输出”Second win”.先取者胜输出”First win”.<br>Input</p>
+<p>题目描述<br>    1堆石子有n个,两人轮流取.先取者第1次可以取任意多个，但不能全部取完.以后每次取的石子数不能超过上次取子数的2倍。取完者胜.先取者负输出”Second win”.先取者胜输出”First win”.</p>
+<p>Input</p>
 <pre><code>输入有多组.每组第1行是2&lt;=n&lt;2^31. n=0退出.</code></pre><p>Output</p>
 <pre><code>先取者负输出&quot;Second win&quot;. 先取者胜输出&quot;First win&quot;.
 参看Sample Output.</code></pre><p>Sample Input</p>
@@ -182,9 +186,51 @@ First win</code></pre><p>题意</p>
 <p><font size=5>K - sg函数2 </font><br><font size=3>这题还没写( `_っ´)</font></p>
 <p><font size=5>L - 区域赛金牌题(HDU5973) </font><br><font size=3>这题还没写( `_っ´)</font></p>
 <p><font size=5>M - SOS</font><br><font size=3>这题还没写( `_っ´)</font></p>
-<p><font size=5>N - Number Game</font><br><font size=3>这题还没写( `_っ´)</font></p>
+<p><font size=5>N - Number Game</font><br>题目描述<br>    Ashishgup and FastestFinger play a game.They start with a number n and play in turns. In each turn, a player can make any one of the following moves:<br>    1: Divide n by any of its odd divisors greater than 1.<br>    2: Subtract 1 from n if n is greater than 1.<br>    Divisors of a number include the number itself.<br>    The player who is unable to make a move loses the game.<br>    Ashishgup moves first. Determine the winner of the game if both of them play optimally.</p>
+<p>Input</p>
+<pre><code>The first line contains a single integer t
+(1≤t≤100)  — the number of test cases. The description of the test cases follows.
+The only line of each test case contains a single integer  — n(1≤n≤109).</code></pre><p>Output</p>
+<pre><code>For each test case, print &quot;Ashishgup&quot; if he wins, and &quot;FastestFinger&quot; otherwise (without quotes).</code></pre><p>Sample Input</p>
+<pre><code>7
+1
+2
+3
+4
+5
+6
+12</code></pre><p>Sample Output</p>
+<pre><code>FastestFinger
+Ashishgup
+Ashishgup
+FastestFinger
+Ashishgup
+FastestFinger
+Ashishgup</code></pre><p>Note</p>
+<pre><code>  In the first test case, n=1, Ashishgup cannot make a move. He loses.
+  In the second test case, n=2, Ashishgup subtracts 1 on the first move. 
+Now n=1, FastestFinger cannot make a move, so he loses.
+  In the third test case, n=3, Ashishgup divides by 3 on the first move. 
+Now n=1, FastestFinger cannot make a move, so he loses.
+  In the last test case, n=12, Ashishgup divides it by 3. 
+Now n=4, FastestFinger is forced to subtract 1, and Ashishgup gets 3, so he wins by dividing it by 3.</code></pre><p>题意</p>
+<pre><code>Ashishgup(As)和FastestFinger(Fa)在一堆n个物品中轮流取，没法取就输了，有两种取法
+一是令n除大于1的奇数；二是n&gt;1时令n-1
+ps:这种题好像不是必胜态就是必败态( ´_ゝ`)
+   因此只要求出其中一人的必胜/败的情况，再把其余的情况全为必败/胜就好了
+观察可得Ash的必败态有如下几种:
+1,当n=2^k(n!=2)即1,4,8......2^k时
+2,当n=2*素数(素数不包括2)时
+下面来解释为什么
+当n为1没什么说的，As没法取自然输
+而其余的n=2^k(n!=2)和n=2*素数(素数不包括2)都表示n没有2次幂或2以外的的余数，因此下一步只能是-1(As操作)
+因此n-1必定为一个奇数,所有人都是理想操作的话则这一步操作是除于n-1本身(Fa操作)
+此时余下数目为1，且次回合是As操作，则As必败</code></pre><p>题解代码：</p>
+<figure class="highlight c"><figcaption><span>[ bash2 ]</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="function">ll <span class="title">isprime</span><span class="params">(ll n)</span></span>&#123;<span class="comment">//看是否为素数</span></span><br><span class="line">    ll i;</span><br><span class="line">    <span class="keyword">for</span>(ll i=<span class="number">2</span>;i&lt;=<span class="built_in">sqrt</span>(n);i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n%i==<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;<span class="built_in">sqrt</span>(n)&amp;&amp;n!=<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> cnt=<span class="number">1</span>,t;</span><br><span class="line">    ll num[<span class="number">30</span>];<span class="comment">//之前写的程序结果显示第30个二次幂数就大于1e9了</span></span><br><span class="line">    num[<span class="number">0</span>]=<span class="number">1</span>;num[<span class="number">1</span>]=<span class="number">4</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;<span class="number">30</span>;i++)<span class="comment">//2^k 不得为2</span></span><br><span class="line">        num[i]=num[i<span class="number">-1</span>]*<span class="number">2</span>;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">    <span class="keyword">while</span>(t--)&#123;</span><br><span class="line">        ll n;</span><br><span class="line">        <span class="keyword">bool</span> b=<span class="number">0</span>;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">30</span>;i++)&#123;<span class="comment">//1 or 2^k</span></span><br><span class="line">            <span class="keyword">if</span>(n==num[i])&#123;</span><br><span class="line">                b=<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">0</span>&amp;&amp;isprime(n/<span class="number">2</span>)==<span class="number">1</span>&amp;&amp;(n/<span class="number">2</span>)&gt;<span class="number">2</span>)<span class="comment">//2*素数 素数不得为2</span></span><br><span class="line">            b=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(b==<span class="number">1</span>)<span class="comment">//先手必败</span></span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"FastestFinger"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"Ashishgup"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p><font size=5>O - 01 Game</font></p>
-<p>题目描述<br>    Alica and Bob are playing a game.<br>    Initially they have a binary string s consisting of only characters 0 and 1.<br>    Alice and Bob make alternating moves: Alice makes the first move, Bob makes the second move, Alice makes the third one, and so on.<br>    During each move, the current player must choose two different adjacent characters of string s and delete them. For example, if s=1011001，then the following moves are possible:<br>       delete s1 and s2: 1011001→11001;<br>       delete s2 and s3: 1011001→11001;<br>       delete s4 and s5: 1011001→10101;<br>       delete s6 and s7: 1011001→10110.<br>    If a player can’t make any move, they lose. Both players play optimally.<br>    You have to determine if Alice can win.<br>Input</p>
+<p>题目描述<br>    Alica and Bob are playing a game.<br>    Initially they have a binary string s consisting of only characters 0 and 1.<br>    Alice and Bob make alternating moves: Alice makes the first move, Bob makes the second move, Alice makes the third one, and so on.<br>    During each move, the current player must choose two different adjacent characters of string s and delete them. For example, if s=1011001，then the following moves are possible:<br>       delete s1 and s2: 1011001→11001;<br>       delete s2 and s3: 1011001→11001;<br>       delete s4 and s5: 1011001→10101;<br>       delete s6 and s7: 1011001→10110.<br>    If a player can’t make any move, they lose. Both players play optimally.<br>    You have to determine if Alice can win.</p>
+<p>Input</p>
 <pre><code>First line contains one integer t(1≤t≤1000) — the number of test cases.
 Only line of each test case contains one string s(1≤|s|≤100), consisting of only characters 0 and 1.</code></pre><p>Output</p>
 <pre><code>For each test case print answer in the single line.
@@ -209,7 +255,8 @@ Alica(先手)和Bob先后删去字符串中的“01”或“10”到无法删除
 <figure class="highlight c"><figcaption><span>[ 01 Game ]</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;//c++用&lt;string&gt;!!!!!!!!!</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">    <span class="keyword">while</span>(t--)&#123;</span><br><span class="line">        <span class="built_in">string</span> s;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;s;</span><br><span class="line">        <span class="keyword">int</span> len=s.length();</span><br><span class="line">        <span class="keyword">int</span> s0=<span class="number">0</span>,s1=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i]==<span class="string">'0'</span>)</span><br><span class="line">                s0++;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                s1++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> d=<span class="built_in">min</span>(s0,s1);<span class="comment">//01对数</span></span><br><span class="line">        <span class="keyword">if</span>(d%<span class="number">2</span>==<span class="number">0</span>)<span class="comment">//偶数必败</span></span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"NET"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"DA"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><font size=5>P - Game On Leaves</font></p>
-<p>题目描述<br>    Ayush and Ashish play a game on an unrooted tree consisting of n nodes numbered 1 to n.<br>    Players make the following move in turns:<br>       Select any leaf node in the tree and remove it together with any edge which has this node as one of its endpoints.<br>    A leaf node is a node with degree less than or equal to 1.<br>    A tree is a connected undirected graph without cycles.<br>    There is a special node numbered x.<br>    The player who removes this node wins the game. Ayush moves first.<br>    Determine the winner of the game if each player plays optimally.<br>Input</p>
+<p>题目描述<br>    Ayush and Ashish play a game on an unrooted tree consisting of n nodes numbered 1 to n.<br>    Players make the following move in turns:<br>       Select any leaf node in the tree and remove it together with any edge which has this node as one of its endpoints.<br>    A leaf node is a node with degree less than or equal to 1.<br>    A tree is a connected undirected graph without cycles.<br>    There is a special node numbered x.<br>    The player who removes this node wins the game. Ayush moves first.<br>    Determine the winner of the game if each player plays optimally.</p>
+<p>Input</p>
 <pre><code>The first line of the input contains a single integer t
 (1≤t≤10) the number of testcases. 
 The description of the test cases follows.
